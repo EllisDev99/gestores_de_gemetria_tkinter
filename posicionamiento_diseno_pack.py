@@ -5,7 +5,7 @@ from tkinter import Tk, Label, TOP, BOTTOM, LEFT, RIGHT
 root = Tk() # se crea la instancia de la clase Tk, que representa la ventana principal
 
 # VENTANA
-root.title("POSICIONAMIENTO Y DISEÑO (PACK)") # agregando tituloa
+root.title("POSICIONAMIENTO Y DISEÑO (PACK)") # agregando titulo
 root.geometry("200x200")
 
 # ETIQUETAS
