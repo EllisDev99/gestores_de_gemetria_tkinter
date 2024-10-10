@@ -1,19 +1,23 @@
 # POSICIONAMIENTO Y DISEÑO
 # PACK
-from tkinter import Tk, Label
+from tkinter import Tk, Label, TOP, BOTTOM, LEFT, RIGHT
 
 root = Tk() # se crea la instancia de la clase Tk, que representa la ventana principal
 
-root.title("Curso de Tkinter") # agregando titulo
-
 # VENTANA
-root.geometry("800x600") # tamaño de la ventana
-root.resizable(True, True) # permite que el usuario cambie el tamaño de la ventana ancho y alto
-root.minsize(200, 200) # tamaño mínimo
-root.maxsize(960, 720) # tamaño máximo
+root.title("POSICIONAMIENTO Y DISEÑO (PACK)") # agregando tituloa
+root.geometry("200x200")
 
+# ETIQUETAS
+etiqueta1 = Label(text="Etiqueta1")
+etiqueta2 = Label(text="Etiqueta2")
+etiqueta3 = Label(text="Etiqueta3")
+etiqueta4 = Label(text="Etiqueta4")
 
-etiqueta = Label(text="\n !Hola Mundo¡ ") # se crea la etiqueta 'widget' con su texto
-etiqueta.pack() # esta sentencia sitúa la etiqueta en la ventana
+# asignamos la posición de cada ventana y le asignamos un padding externo de 10px sea en el eje X o Y
+etiqueta1.pack(side=TOP, pady=10)
+etiqueta2.pack(side=BOTTOM, pady=10)
+etiqueta3.pack(side=LEFT, padx=10)
+etiqueta4.pack(side=RIGHT, padx=10)
 
 root.mainloop() # loop infinito que inicia el programa
