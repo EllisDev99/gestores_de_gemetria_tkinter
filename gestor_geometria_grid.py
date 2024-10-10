@@ -48,11 +48,21 @@ columnas = 4
 root = Tk()
 
 for fila in range(filas):
-    root.rowconfigure(fila, weight=1) # las filas se adaptan al tamaño de la ventana
+    root.rowconfigure(fila, weight=1)
     for columna in range(columnas):
-        etiqueta = Label(text="Etiqueta"+str(fila)+str(columna), bg='yellow')
+        etiqueta = Label(text=f"Etiqueta {fila}{columna}", bg='yellow')
         etiqueta.grid(row=fila, column=columna, padx=2, pady=2, sticky="nsew")
-        # con sticky="nsew" le decimos que las celdas ocupen todo el tamaño
-        root.columnconfigure(columna, weight=1) # las columnas se adaptan al tamaño de la ventana
+        root.columnconfigure(columna, weight=1)
 
 root.mainloop()
+
+"""
+-> Explicación del código:
+* rowconfigure y columnconfigure: Estas funciones configuran cada fila y columna para que se adapten al tamaño de la ventana. El parámetro weight=1 indica que todas las filas y columnas tendrán el mismo peso, es decir, se expandirán o contraerán proporcionalmente al cambiar el tamaño de la ventana.
+
+* Label: Se crea una etiqueta con un texto que combina el número de fila y columna.
+
+* grid: Este método coloca la etiqueta en una celda específica de la cuadrícula definida  por row y column. Los parámetros padx y pady añaden un espacio alrededor de la etiqueta.
+
+* sticky="nsew": Este parámetro hace que la etiqueta se expanda en todas las direcciones (norte, sur, este, oeste), ocupando todo el espacio disponible en la celda.
+"""
